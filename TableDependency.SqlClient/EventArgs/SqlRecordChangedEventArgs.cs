@@ -1,6 +1,6 @@
 ﻿#region License
 // TableDependency, SqlTableDependency
-// Copyright (c) 2015-2017 Christian Del Bianco. All rights reserved.
+// Copyright (c) 2015-2019 Christian Del Bianco. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -26,44 +26,49 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Reflection;
 using System.Text;
-using TableDependency.Abstracts;
-using TableDependency.EventArgs;
-using TableDependency.Messages;
+
+using TableDependency.SqlClient.Base.Abstracts;
+using TableDependency.SqlClient.Base.EventArgs;
+using TableDependency.SqlClient.Base.Messages;
+using TableDependency.SqlClient.Base.Utilities;
 using TableDependency.SqlClient.Extensions;
-using TableDependency.Utilities;
 
 namespace TableDependency.SqlClient.EventArgs
 {
-    public sealed class SqlRecordChangedEventArgs<T> : RecordChangedEventArgs<T> where T : class
+    public sealed class SqlRecordChangedEventArgs<T> : RecordChangedEventArgs<T> where T : class, new()
     {
         public SqlRecordChangedEventArgs(
             MessagesBag messagesBag,
             IModelToTableMapper<T> mapper,
-            IEnumerable<ColumnInfo> userInterestedColumns,            
+            IEnumerable<TableColumnInfo> userInterestedColumns,
             string server,
             string database,
             string sender,
-            string cultureInfoFiveLettersIsoCode) : base(messagesBag, mapper, userInterestedColumns, server, database, sender, cultureInfoFiveLettersIsoCode)
+            CultureInfo cultureInfo,
+            bool includeOldValues) : base(
+                messagesBag,
+                mapper,
+                userInterestedColumns,
+                server,
+                database,
+                sender,
+                cultureInfo,
+                includeOldValues)
         {
-
         }
 
-        public override object GetValue(PropertyInfo entityPropertyInfo, ColumnInfo columnInfo, byte[] message)
+        public override object GetValue(PropertyInfo entityPropertyInfo, TableColumnInfo columnInfo, byte[] message)
         {
             if (message == null || message.Length == 0) return null;
 
             if (entityPropertyInfo.PropertyType.GetTypeInfo().IsEnum)
             {
-                foreach (var fInfo in entityPropertyInfo.PropertyType.GetFields(BindingFlags.Public | BindingFlags.Static))
-                {
-                    var underlyingType = Enum.GetUnderlyingType(entityPropertyInfo.PropertyType);
-                    var stringValue = Encoding.Unicode.GetString(message);
-                    var value = Convert.ChangeType(stringValue, underlyingType);
-                    var enumVal = fInfo.GetRawConstantValue();
-                    if (value == enumVal) return enumVal;
-                }
+                var stringValue = Encoding.Unicode.GetString(message);
+                var value = Enum.Parse(entityPropertyInfo.PropertyType, stringValue);
+                return value.GetHashCode();
             }
 
             if (entityPropertyInfo.PropertyType == typeof(byte[])) return message;

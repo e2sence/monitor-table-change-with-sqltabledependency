@@ -1,6 +1,6 @@
 ﻿#region License
 // TableDependency, SqlTableDependency
-// Copyright (c) 2015-2017 Christian Del Bianco. All rights reserved.
+// Copyright (c) 2015-2019 Christian Del Bianco. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -23,6 +23,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
+
 using System.ComponentModel;
 
 namespace TableDependency.SqlClient.Enumerations
@@ -34,28 +35,40 @@ namespace TableDependency.SqlClient.Enumerations
     {
         [Description("ALTER")]
         Alter,
+
         [Description("CONNECT")]
         Connect,
+
         [Description("CONTROL")]
         Control,
+
         [Description("CREATE CONTRACT")]
         CreateContract,
+
         [Description("CREATE MESSAGE TYPE")]
         CreateMessageType,
+
         [Description("CREATE PROCEDURE")]
         CreateProcedure,
+
         [Description("CREATE QUEUE")]
         CreateQueue,
+
         [Description("CREATE SERVICE")]
         CreateService,
+
         [Description("EXECUTE")]
         Execute,
+
         [Description("SELECT")]
         Select,
+
         [Description("SUBSCRIBE QUERY NOTIFICATIONS")]
         SubscribeForQueryNotifications,
+
         [Description("VIEW DATABASE STATE")]
         ViewDatabaseState,
+
         [Description("VIEW DEFINITION")]
         ViewDefinition
     }

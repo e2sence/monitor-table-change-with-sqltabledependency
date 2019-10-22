@@ -1,106 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency", "TableDependency\TableDependency.csproj", "{0A46A45A-BE9B-455F-A6D1-183C07FEF4BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableDependency.SqlClient", "TableDependency.SqlClient\TableDependency.SqlClient.csproj", "{110FF47E-D483-4B69-9ECA-D784392C6A44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency.SqlClient", "TableDependency.SqlClient\TableDependency.SqlClient.csproj", "{3B201820-CB8F-41A1-8430-0C806BCF7494}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency.SqlClient.Test", "TableDependency.SqlClient.Test\TableDependency.SqlClient.Test.csproj", "{50187A69-921C-453C-B616-92B6FF5AD541}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LoadTests", "LoadTests", "{0388953A-AF9E-4718-A9B3-1AB5CABCE7FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableDependency.SqlClient.Test.Client.Core", "TableDependency.SqlClient.Test.Client.Core\TableDependency.SqlClient.Test.Client.Core.csproj", "{3A2F7976-F45D-480C-98E2-0EAB7A964C66}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{BE3F6738-85D8-46D0-928F-87085E19E9C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency.SqlClient.Test.Client.Framework", "TableDependency.SqlClient.Test.Client.Framework\TableDependency.SqlClient.Test.Client.Framework.csproj", "{36EF3309-9552-412C-83B0-CFC19F77BEA1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{48852C1F-6B3D-4A7B-8836-7D45B50DBD20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency.SqlClient.Test.LoadTests.Listener", "TableDependency.SqlClient.Test.LoadTests.Listener\TableDependency.SqlClient.Test.LoadTests.Listener.csproj", "{F0B96D56-82E9-4D42-B7A5-4CDE42CB587A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Development", "Development", "{BAF6F0A5-FEA5-46F6-93B3-AD7D377F2072}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency.SqlClient.Test.LoadTests.Writer1", "TableDependency.SqlClient.Test.LoadTests.Writer1\TableDependency.SqlClient.Test.LoadTests.Writer1.csproj", "{6A4BBE77-C4B7-4A81-9E2A-D2DE4E601268}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationListener1", "TableDependency.Tests\TableDependency.LoadTests\ApplicationListener1\ApplicationListener1.csproj", "{6046B310-27AA-43A8-9B44-59EF2A45C7DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency.SqlClient.Test.LoadTests.Writer2", "TableDependency.SqlClient.Test.LoadTests.Writer2\TableDependency.SqlClient.Test.LoadTests.Writer2.csproj", "{EF72470D-79CE-471E-8395-0E9A580E385C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationWriter1", "TableDependency.Tests\TableDependency.LoadTests\ApplicationWriter1\ApplicationWriter1.csproj", "{FD1BB916-453D-4D39-B7B1-B675801C3ED3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationWriter2", "TableDependency.Tests\TableDependency.LoadTests\ApplicationWriter2\ApplicationWriter2.csproj", "{02847705-A2CF-4EF3-AEEB-072D84222BFE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency.IntegrationTest", "TableDependency.Tests\TableDependency.IntegrationTest\TableDependency.IntegrationTest.csproj", "{EFC8D631-311A-4E29-91C4-2DEB5B756BB3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplicationSqlServer", "TableDependency.Tests\TableDependency.DevelopmentTests\ConsoleApplicationSqlServer.csproj", "{D3EFDFCF-49DC-4BCA-8B7C-97E623687BB0}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{6C9E1520-22CC-4C41-AF71-4DC4D08DA77B}"
-	ProjectSection(SolutionItems) = preProject
-		docs\audit-table-change-infrastructure.html = docs\audit-table-change-infrastructure.html
-		docs\DbObjects.png = docs\DbObjects.png
-		docs\favicon.ico = docs\favicon.ico
-		docs\font-awesome.min.css = docs\font-awesome.min.css
-		docs\github.png = docs\github.png
-		docs\googlead9d15621c6a850b.html = docs\googlead9d15621c6a850b.html
-		docs\ie10-viewport-bug-workaround.css = docs\ie10-viewport-bug-workaround.css
-		docs\ie10-viewport-bug-workaround.js = docs\ie10-viewport-bug-workaround.js
-		docs\index.html = docs\index.html
-		docs\NuGetSqlTableDependency.png = docs\NuGetSqlTableDependency.png
-		docs\NuGetSqlTableDependencyvs.png = docs\NuGetSqlTableDependencyvs.png
-		docs\receive-notifications-nuget-package.html = docs\receive-notifications-nuget-package.html
-		docs\robots.txt = docs\robots.txt
-		docs\rsz_notify.png = docs\rsz_notify.png
-		docs\site.css = docs\site.css
-		docs\site.min.css = docs\site.min.css
-		docs\sitemap.xml = docs\sitemap.xml
-		docs\socials\css\social-share-kit.css = docs\socials\css\social-share-kit.css
-		docs\table-change-infrastructure-dll.png = docs\table-change-infrastructure-dll.png
-		docs\table-change-infrastructure-nuget.png = docs\table-change-infrastructure-nuget.png
-		docs\table-change-infrastructure.png = docs\table-change-infrastructure.png
-		docs\table-change-notifications-examples.html = docs\table-change-notifications-examples.html
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bootstrap", "bootstrap", "{2A9986A0-BAF0-484B-AE88-F665FBDEC99A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{C8141439-8E51-4DF3-BFF5-218C5701C624}"
-	ProjectSection(SolutionItems) = preProject
-		docs\bootstrap\css\bootstrap-theme.css = docs\bootstrap\css\bootstrap-theme.css
-		docs\bootstrap\css\bootstrap-theme.css.map = docs\bootstrap\css\bootstrap-theme.css.map
-		docs\bootstrap\css\bootstrap-theme.min.css = docs\bootstrap\css\bootstrap-theme.min.css
-		docs\bootstrap\css\bootstrap-theme.min.css.map = docs\bootstrap\css\bootstrap-theme.min.css.map
-		docs\bootstrap\css\bootstrap.css = docs\bootstrap\css\bootstrap.css
-		docs\bootstrap\css\bootstrap.css.map = docs\bootstrap\css\bootstrap.css.map
-		docs\bootstrap\css\bootstrap.min.css = docs\bootstrap\css\bootstrap.min.css
-		docs\bootstrap\css\bootstrap.min.css.map = docs\bootstrap\css\bootstrap.min.css.map
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fonts", "fonts", "{501757C2-A08A-4312-A28D-63499FD9AA1A}"
-	ProjectSection(SolutionItems) = preProject
-		docs\bootstrap\fonts\glyphicons-halflings-regular.eot = docs\bootstrap\fonts\glyphicons-halflings-regular.eot
-		docs\bootstrap\fonts\glyphicons-halflings-regular.svg = docs\bootstrap\fonts\glyphicons-halflings-regular.svg
-		docs\bootstrap\fonts\glyphicons-halflings-regular.ttf = docs\bootstrap\fonts\glyphicons-halflings-regular.ttf
-		docs\bootstrap\fonts\glyphicons-halflings-regular.woff = docs\bootstrap\fonts\glyphicons-halflings-regular.woff
-		docs\bootstrap\fonts\glyphicons-halflings-regular.woff2 = docs\bootstrap\fonts\glyphicons-halflings-regular.woff2
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{BB8EFAAA-7D6D-416B-B95C-A3D927303654}"
-	ProjectSection(SolutionItems) = preProject
-		docs\bootstrap\js\bootstrap.js = docs\bootstrap\js\bootstrap.js
-		docs\bootstrap\js\bootstrap.min.js = docs\bootstrap\js\bootstrap.min.js
-		docs\bootstrap\js\npm.js = docs\bootstrap\js\npm.js
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "socials", "socials", "{936B2C51-CE28-4832-AF23-48BF86D78F0E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{3BE6F1BF-459A-4315-8B4D-327E9DE590ED}"
-	ProjectSection(SolutionItems) = preProject
-		docs\socials\css\social-share-kit.css = docs\socials\css\social-share-kit.css
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fonts", "fonts", "{654FE58B-C906-40A6-92F7-F4F9B557B481}"
-	ProjectSection(SolutionItems) = preProject
-		docs\socials\fonts\social-share-kit.eot = docs\socials\fonts\social-share-kit.eot
-		docs\socials\fonts\social-share-kit.svg = docs\socials\fonts\social-share-kit.svg
-		docs\socials\fonts\social-share-kit.ttf = docs\socials\fonts\social-share-kit.ttf
-		docs\socials\fonts\social-share-kit.woff = docs\socials\fonts\social-share-kit.woff
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{079392EB-C573-4232-AD50-7C84D86D2679}"
-	ProjectSection(SolutionItems) = preProject
-		docs\socials\js\social-share-kit.js = docs\socials\js\social-share-kit.js
-		docs\socials\js\social-share-kit.min.js = docs\socials\js\social-share-kit.min.js
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FA240A2D-1556-4A9F-9036-8AB067D4E3CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -108,54 +25,47 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0A46A45A-BE9B-455F-A6D1-183C07FEF4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A46A45A-BE9B-455F-A6D1-183C07FEF4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A46A45A-BE9B-455F-A6D1-183C07FEF4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A46A45A-BE9B-455F-A6D1-183C07FEF4BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B201820-CB8F-41A1-8430-0C806BCF7494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B201820-CB8F-41A1-8430-0C806BCF7494}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B201820-CB8F-41A1-8430-0C806BCF7494}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B201820-CB8F-41A1-8430-0C806BCF7494}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6046B310-27AA-43A8-9B44-59EF2A45C7DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6046B310-27AA-43A8-9B44-59EF2A45C7DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6046B310-27AA-43A8-9B44-59EF2A45C7DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6046B310-27AA-43A8-9B44-59EF2A45C7DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD1BB916-453D-4D39-B7B1-B675801C3ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD1BB916-453D-4D39-B7B1-B675801C3ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD1BB916-453D-4D39-B7B1-B675801C3ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD1BB916-453D-4D39-B7B1-B675801C3ED3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02847705-A2CF-4EF3-AEEB-072D84222BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02847705-A2CF-4EF3-AEEB-072D84222BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02847705-A2CF-4EF3-AEEB-072D84222BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02847705-A2CF-4EF3-AEEB-072D84222BFE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EFC8D631-311A-4E29-91C4-2DEB5B756BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFC8D631-311A-4E29-91C4-2DEB5B756BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EFC8D631-311A-4E29-91C4-2DEB5B756BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EFC8D631-311A-4E29-91C4-2DEB5B756BB3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3EFDFCF-49DC-4BCA-8B7C-97E623687BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3EFDFCF-49DC-4BCA-8B7C-97E623687BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3EFDFCF-49DC-4BCA-8B7C-97E623687BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3EFDFCF-49DC-4BCA-8B7C-97E623687BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{110FF47E-D483-4B69-9ECA-D784392C6A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110FF47E-D483-4B69-9ECA-D784392C6A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110FF47E-D483-4B69-9ECA-D784392C6A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110FF47E-D483-4B69-9ECA-D784392C6A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50187A69-921C-453C-B616-92B6FF5AD541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50187A69-921C-453C-B616-92B6FF5AD541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50187A69-921C-453C-B616-92B6FF5AD541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50187A69-921C-453C-B616-92B6FF5AD541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A2F7976-F45D-480C-98E2-0EAB7A964C66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A2F7976-F45D-480C-98E2-0EAB7A964C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A2F7976-F45D-480C-98E2-0EAB7A964C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A2F7976-F45D-480C-98E2-0EAB7A964C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36EF3309-9552-412C-83B0-CFC19F77BEA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36EF3309-9552-412C-83B0-CFC19F77BEA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36EF3309-9552-412C-83B0-CFC19F77BEA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36EF3309-9552-412C-83B0-CFC19F77BEA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0B96D56-82E9-4D42-B7A5-4CDE42CB587A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B96D56-82E9-4D42-B7A5-4CDE42CB587A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B96D56-82E9-4D42-B7A5-4CDE42CB587A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B96D56-82E9-4D42-B7A5-4CDE42CB587A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A4BBE77-C4B7-4A81-9E2A-D2DE4E601268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4BBE77-C4B7-4A81-9E2A-D2DE4E601268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4BBE77-C4B7-4A81-9E2A-D2DE4E601268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4BBE77-C4B7-4A81-9E2A-D2DE4E601268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF72470D-79CE-471E-8395-0E9A580E385C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF72470D-79CE-471E-8395-0E9A580E385C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF72470D-79CE-471E-8395-0E9A580E385C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF72470D-79CE-471E-8395-0E9A580E385C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{0388953A-AF9E-4718-A9B3-1AB5CABCE7FB} = {48852C1F-6B3D-4A7B-8836-7D45B50DBD20}
-		{BE3F6738-85D8-46D0-928F-87085E19E9C0} = {48852C1F-6B3D-4A7B-8836-7D45B50DBD20}
-		{BAF6F0A5-FEA5-46F6-93B3-AD7D377F2072} = {48852C1F-6B3D-4A7B-8836-7D45B50DBD20}
-		{6046B310-27AA-43A8-9B44-59EF2A45C7DF} = {0388953A-AF9E-4718-A9B3-1AB5CABCE7FB}
-		{FD1BB916-453D-4D39-B7B1-B675801C3ED3} = {0388953A-AF9E-4718-A9B3-1AB5CABCE7FB}
-		{02847705-A2CF-4EF3-AEEB-072D84222BFE} = {0388953A-AF9E-4718-A9B3-1AB5CABCE7FB}
-		{EFC8D631-311A-4E29-91C4-2DEB5B756BB3} = {BE3F6738-85D8-46D0-928F-87085E19E9C0}
-		{D3EFDFCF-49DC-4BCA-8B7C-97E623687BB0} = {BAF6F0A5-FEA5-46F6-93B3-AD7D377F2072}
-		{2A9986A0-BAF0-484B-AE88-F665FBDEC99A} = {6C9E1520-22CC-4C41-AF71-4DC4D08DA77B}
-		{C8141439-8E51-4DF3-BFF5-218C5701C624} = {2A9986A0-BAF0-484B-AE88-F665FBDEC99A}
-		{501757C2-A08A-4312-A28D-63499FD9AA1A} = {2A9986A0-BAF0-484B-AE88-F665FBDEC99A}
-		{BB8EFAAA-7D6D-416B-B95C-A3D927303654} = {2A9986A0-BAF0-484B-AE88-F665FBDEC99A}
-		{936B2C51-CE28-4832-AF23-48BF86D78F0E} = {6C9E1520-22CC-4C41-AF71-4DC4D08DA77B}
-		{3BE6F1BF-459A-4315-8B4D-327E9DE590ED} = {936B2C51-CE28-4832-AF23-48BF86D78F0E}
-		{654FE58B-C906-40A6-92F7-F4F9B557B481} = {936B2C51-CE28-4832-AF23-48BF86D78F0E}
-		{079392EB-C573-4232-AD50-7C84D86D2679} = {936B2C51-CE28-4832-AF23-48BF86D78F0E}
+		{50187A69-921C-453C-B616-92B6FF5AD541} = {FA240A2D-1556-4A9F-9036-8AB067D4E3CA}
+		{3A2F7976-F45D-480C-98E2-0EAB7A964C66} = {FA240A2D-1556-4A9F-9036-8AB067D4E3CA}
+		{36EF3309-9552-412C-83B0-CFC19F77BEA1} = {FA240A2D-1556-4A9F-9036-8AB067D4E3CA}
+		{F0B96D56-82E9-4D42-B7A5-4CDE42CB587A} = {FA240A2D-1556-4A9F-9036-8AB067D4E3CA}
+		{6A4BBE77-C4B7-4A81-9E2A-D2DE4E601268} = {FA240A2D-1556-4A9F-9036-8AB067D4E3CA}
+		{EF72470D-79CE-471E-8395-0E9A580E385C} = {FA240A2D-1556-4A9F-9036-8AB067D4E3CA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE07F587-F2D3-4DFC-907C-F6967C6E2B54}
 	EndGlobalSection
 EndGlobal
